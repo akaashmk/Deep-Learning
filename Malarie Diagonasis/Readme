@@ -1,0 +1,68 @@
+Here is a draft for your GitHub README file based on the notebook and project context:
+
+---
+
+# Malaria Diagnosis Project
+
+This project uses deep learning to classify cell images as either "Parasite" (infected) or "Uninfected" for malaria diagnosis. The workflow leverages TensorFlow and Keras to build, train, and evaluate convolutional neural networks (CNNs) on the malaria dataset.
+
+## Features
+
+- Loads and preprocesses the malaria image dataset using TensorFlow Datasets.
+- Splits data into training, validation, and test sets.
+- Implements image augmentation and normalization.
+- Builds models using both Sequential and Functional Keras APIs.
+- Trains models and visualizes loss and accuracy.
+- Evaluates model performance and saves trained models.
+- Predicts and visualizes results on test images.
+
+## Requirements
+
+- Python 3.x
+- TensorFlow
+- NumPy
+- Matplotlib
+- scikit-learn
+- OpenCV
+- Seaborn
+- tensorflow-datasets
+
+## Usage
+
+1. Clone the repository.
+2. Install dependencies:
+   ```
+   pip install tensorflow numpy matplotlib scikit-learn opencv-python seaborn tensorflow-datasets
+   ```
+3. Run the notebook `malarie_diagonasis.ipynb` to train and evaluate the model.
+
+## Files
+
+- `malarie_diagonasis.ipynb`: Main Jupyter notebook with code and explanations.
+- `malaria_model.hdf5`: Saved trained model.
+- `Readme`: Project documentation (this file).
+
+## Dataset
+
+The project uses the malaria dataset from TensorFlow Datasets:
+
+- [Malaria Dataset Documentation](https://www.tensorflow.org/datasets/community_catalog/huggingface/malaria)
+
+## Model Architecture
+
+- Convolutional layers for feature extraction.
+- Batch normalization and pooling layers.
+- Dense layers for classification.
+- Output layer with sigmoid activation for binary classification.
+
+## Results
+
+- Training and validation loss/accuracy plots.
+- Confusion matrix and ROC curve (can be added for further analysis).
+- Sample predictions visualized for test images.
+
+## GPU Support
+
+The notebook includes checks for GPU availability to accelerate training.
+
+---
