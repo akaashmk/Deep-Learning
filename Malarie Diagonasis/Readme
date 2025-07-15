@@ -1,7 +1,3 @@
-Here is a draft for your GitHub README file based on the notebook and project context:
-
----
-
 # Malaria Diagnosis Project
 
 This project uses deep learning to classify cell images as either "Parasite" (infected) or "Uninfected" for malaria diagnosis. The workflow leverages TensorFlow and Keras to build, train, and evaluate convolutional neural networks (CNNs) on the malaria dataset.
