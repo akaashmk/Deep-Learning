@@ -1,6 +1,7 @@
+
 # Malaria Diagnosis Project
 
-A deep learning-based image classification project to detect malaria-infected cells. The system uses Convolutional Neural Networks (CNNs) to classify cell images as either **"Parasite" (infected)** or **"Uninfected"**, enabling automated and efficient malaria diagnosis.
+A deep learning-based image classification project to detect malaria-infected cells. The system uses Convolutional Neural Networks (CNNs) to classify cell images as either **"Parasite" (infected)** or **"Uninfected"**.
 
 ---
 
@@ -21,55 +22,78 @@ A deep learning-based image classification project to detect malaria-infected ce
 
 Ensure Python 3.x is installed, then install the required Python packages:
 
-`bash`
+```bash
 pip install tensorflow numpy matplotlib scikit-learn opencv-python seaborn tensorflow-datasets
+```
 
-Project Structure
+---
+
+## Project Structure
+
+```
 malaria-diagnosis-project/
-├── malarie_diagonasis.ipynb # Main Jupyter notebook
-├── malaria_model.hdf5 # Saved trained model
-├── README.md # Project documentation
-Usage
-Clone the Repository
+├── malarie_diagonasis.ipynb   # Main Jupyter notebook
+├── malaria_model.hdf5         # Saved trained model
+├── README.md                  # Project documentation
+```
+
+---
+
+## Usage
+
+**Clone the Repository:**
+```bash
 git clone https://github.com/your-username/malaria-diagnosis-project.git
 cd malaria-diagnosis-project
-Install Dependencies
+```
 
-        pip install -r requirements.txt
-    Run the Notebook
-        Open malarie_diagonasis.ipynb using Jupyter Notebook or JupyterLab and follow the code to train, evaluate, and test the CNN model.
+**Install Dependencies:**
+```bash
+pip install -r requirements.txt
+```
 
-Dataset
+**Run the Notebook:**
+Open `malarie_diagonasis.ipynb` using Jupyter Notebook or JupyterLab and follow the code to train, evaluate, and test the CNN model.
+
+---
+
+## Dataset
+
 This project uses the Malaria Cell Images Dataset provided through TensorFlow Datasets:
 
-     Malaria Dataset Documentation
+- 27,558 cell images labeled as “Parasitized” or “Uninfected”.
+- Images have a consistent size of 128x128x3 pixels.
 
-    27,558 cell images labeled as “Parasitized” or “Uninfected”.
+For more details, see [Malaria Dataset Documentation](https://www.tensorflow.org/datasets/catalog/malaria).
 
-    Images have a consistent size of 128x128x3 pixels.
+---
 
-Model Architecture
-Multiple Convolutional Layers for feature extraction
+## Model Architecture
 
-    Batch Normalization for training stability
+- Multiple Convolutional Layers for feature extraction
+- Batch Normalization for training stability
+- Max Pooling layers for spatial downsampling
+- Fully-connected (Dense) layers for classification
+- Final Sigmoid-activated output layer for binary classification
 
-    Max Pooling layers for spatial downsampling
+---
 
-    Fully-connected (Dense) layers for classification
+## Results
 
-    Final Sigmoid-activated output layer for binary classification
+- Training and validation accuracy and loss are plotted during training.
+- Performance metrics include:
+  - Accuracy
+  - Loss
+  - Confusion Matrix
+  - ROC Curve (optional)
+- Visualization of test predictions shows classification results on sample images.
 
-Results
-Training and validation accuracy and loss are plotted during training.
+---
 
-    Performance metrics include:
+## GPU Support
 
-         Accuracy
-         Loss
-         Confusion Matrix
-         ROC Curve (optional)
-
-Visualization of test predictions shows classification results on sample images.
-
-GPU Support
 This project includes automatic detection and usage of a GPU (if available), significantly speeding up model training when using compatible hardware (e.g., NVIDIA GPUs with CUDA support).
+
+---
+
+Let me know if you want further customization or details added!
