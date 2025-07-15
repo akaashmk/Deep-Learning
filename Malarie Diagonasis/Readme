@@ -1,64 +1,75 @@
 # Malaria Diagnosis Project
 
-This project uses deep learning to classify cell images as either "Parasite" (infected) or "Uninfected" for malaria diagnosis. The workflow leverages TensorFlow and Keras to build, train, and evaluate convolutional neural networks (CNNs) on the malaria dataset.
+A deep learning-based image classification project to detect malaria-infected cells. The system uses Convolutional Neural Networks (CNNs) to classify cell images as either **"Parasite" (infected)** or **"Uninfected"**, enabling automated and efficient malaria diagnosis.
+
+---
 
 ## Features
 
 - Loads and preprocesses the malaria image dataset using TensorFlow Datasets.
-- Splits data into training, validation, and test sets.
-- Implements image augmentation and normalization.
-- Builds models using both Sequential and Functional Keras APIs.
-- Trains models and visualizes loss and accuracy.
-- Evaluates model performance and saves trained models.
+- Splits the dataset into training, validation, and test sets.
+- Includes image augmentation and normalization for better generalization.
+- Builds CNN models using both **Sequential** and **Functional** APIs from Keras.
+- Visualizes training/validation accuracy and loss.
+- Evaluates model performance using accuracy, loss, confusion matrix, and ROC curve.
+- Saves trained models in HDF5 format.
 - Predicts and visualizes results on test images.
+
+---
 
 ## Requirements
 
-- Python 3.x
-- TensorFlow
-- NumPy
-- Matplotlib
-- scikit-learn
-- OpenCV
-- Seaborn
-- tensorflow-datasets
+Ensure Python 3.x is installed, then install the required Python packages:
 
-## Usage
+`bash`
+pip install tensorflow numpy matplotlib scikit-learn opencv-python seaborn tensorflow-datasets
 
-1. Clone the repository.
-2. Install dependencies:
-   ```
-   pip install tensorflow numpy matplotlib scikit-learn opencv-python seaborn tensorflow-datasets
-   ```
-3. Run the notebook `malarie_diagonasis.ipynb` to train and evaluate the model.
+Project Structure
+malaria-diagnosis-project/
+├── malarie_diagonasis.ipynb # Main Jupyter notebook
+├── malaria_model.hdf5 # Saved trained model
+├── README.md # Project documentation
+Usage
+Clone the Repository
+git clone https://github.com/your-username/malaria-diagnosis-project.git
+cd malaria-diagnosis-project
+Install Dependencies
 
-## Files
+        pip install -r requirements.txt
+    Run the Notebook
+        Open malarie_diagonasis.ipynb using Jupyter Notebook or JupyterLab and follow the code to train, evaluate, and test the CNN model.
 
-- `malarie_diagonasis.ipynb`: Main Jupyter notebook with code and explanations.
-- `malaria_model.hdf5`: Saved trained model.
-- `Readme`: Project documentation (this file).
+Dataset
+This project uses the Malaria Cell Images Dataset provided through TensorFlow Datasets:
 
-## Dataset
+     Malaria Dataset Documentation
 
-The project uses the malaria dataset from TensorFlow Datasets:
+    27,558 cell images labeled as “Parasitized” or “Uninfected”.
 
-- [Malaria Dataset Documentation](https://www.tensorflow.org/datasets/community_catalog/huggingface/malaria)
+    Images have a consistent size of 128x128x3 pixels.
 
-## Model Architecture
+Model Architecture
+Multiple Convolutional Layers for feature extraction
 
-- Convolutional layers for feature extraction.
-- Batch normalization and pooling layers.
-- Dense layers for classification.
-- Output layer with sigmoid activation for binary classification.
+    Batch Normalization for training stability
 
-## Results
+    Max Pooling layers for spatial downsampling
 
-- Training and validation loss/accuracy plots.
-- Confusion matrix and ROC curve (can be added for further analysis).
-- Sample predictions visualized for test images.
+    Fully-connected (Dense) layers for classification
 
-## GPU Support
+    Final Sigmoid-activated output layer for binary classification
 
-The notebook includes checks for GPU availability to accelerate training.
+Results
+Training and validation accuracy and loss are plotted during training.
 
----
+    Performance metrics include:
+
+         Accuracy
+         Loss
+         Confusion Matrix
+         ROC Curve (optional)
+
+Visualization of test predictions shows classification results on sample images.
+
+GPU Support
+This project includes automatic detection and usage of a GPU (if available), significantly speeding up model training when using compatible hardware (e.g., NVIDIA GPUs with CUDA support).
