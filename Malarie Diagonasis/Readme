@@ -1,4 +1,4 @@
-# Malaria Diagnosis Project
+#Malaria Diagnosis Project
 
 A deep learning-based image classification project to detect malaria-infected cells. The system uses Convolutional Neural Networks (CNNs) to classify cell images as either **"Parasite" (infected)** or **"Uninfected"**, enabling automated and efficient malaria diagnosis.
 
