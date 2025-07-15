@@ -1,4 +1,3 @@
-
 # Malaria Diagnosis Project
 
 A deep learning-based image classification project to detect malaria-infected cells. The system uses Convolutional Neural Networks (CNNs) to classify cell images as either **"Parasite" (infected)** or **"Uninfected"**.
@@ -42,12 +41,14 @@ malaria-diagnosis-project/
 ## Usage
 
 **Clone the Repository:**
+
 ```bash
 git clone https://github.com/your-username/malaria-diagnosis-project.git
 cd malaria-diagnosis-project
 ```
 
 **Install Dependencies:**
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -93,7 +94,3 @@ For more details, see [Malaria Dataset Documentation](https://www.tensorflow.org
 ## GPU Support
 
 This project includes automatic detection and usage of a GPU (if available), significantly speeding up model training when using compatible hardware (e.g., NVIDIA GPUs with CUDA support).
-
----
-
-Let me know if you want further customization or details added!
